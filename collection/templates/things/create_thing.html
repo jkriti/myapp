@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+    Create a Thing - {{ block.super }}
+{% endblock title %} 
+<script src="js/form.js" type="text/javascript"></script>
+{% block content %}
+    <h1>Create a Thing</h1>
+    <form role="form1" action="" method="post" enctype="text/plain" alt="" name="form1">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="button" id="createID" value="Create Form" onclick="makeForm()" />
+
+		<br />
+
+		</p>
+
+		</form>
+
+		<hr>
+		</form>
+
+		<p id="paraID">
+
+		&nbsp;
+
+		</p>
+
+		<hr>
+
+	<form id="form2" name="form2" method="post" action enctype="text/plain" alt="">
+
+	<p>
+
+	<input type="button" id="deleteID" value="Delete Form" disabled="true" onclick="deleteForm()" />
+
+	</p>
+
+	</form>
+
+      
+{% endblock %}
